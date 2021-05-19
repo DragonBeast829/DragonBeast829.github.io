@@ -1,0 +1,131 @@
+<header>
+    <link rel="stylesheet" type="text/css" href="interface.css" defer/>
+    <script type="text/javascript" src="main.js" defer></script>
+    <title>Pie Tycoon</title>
+</header>
+<body>
+    <div id="loading" class="loading">
+        Loading...
+    </div>
+    <div id="game" class="hide">
+        <div class="container m4">
+            <div>Money: $<span id="money">0</span></div>
+            <div>Apple Pies: <span id="applePieCount">0</span></div>
+            <div>Apple Pie Price: $<span id="applePieCost">0</span></div>
+            <div>Blueberry Pies: <span id="blueberryPieCount">0</span></div>
+            <div>Blueberry Pie Price: $<Blueberry id="blueberryPieCost"></Blueberry></div>
+        </div>
+
+        <div class="container m4">
+            <div class="pietype m4">
+                <div class="title">
+                    <div class="pieButton"> 
+                        <button onClick="applePieClick(1)" class="pie"></button>
+                    </div>
+                    <div class="titleText">Apple Pies</div>
+                </div>
+
+                <div class="upgradeContainer">
+                    <div class="upgradeButton">
+                        <button onClick="buyApplePieCooks()">Cooks</button>
+                    </div>
+                    <div class="upgradeDetails">
+                        <div class="upgradeItem m4">Cooks: <span id="applePieCooks"></span> <span class="ml8">This is the number of cooks currently in your kitchen making apple pies.</span></div>
+                        <div class="upgradeItem m4">Cost: $<span id="applePieCookCost"></span> <span class="ml8">This is the cost to hire one more cook. Man they get expensive.</span></div>
+                        <div class="upgradeItem m4">"A nice cook to bake for you." These guys working together bake <span id="applePieCooksBakeCount">N</span> every <span id="applePieCooksBakeTime">N</span> seconds.</div>
+                    </div>
+                </div>
+
+                <div class="upgradeContainer">
+                    <div class="upgradeButton">
+                        <button onClick="buyApplePieIngredients()">Ingredients</button>
+                    </div>
+                    <div class="upgradeDetails">
+                        <div class="upgradeItem m4">Ingredients: <span id="applePieIngredients"></span> <span class="ml8">This is the number of higher-quality ingredients currently in your kitchen making apple pies taste better!</span></div>
+                        <div class="upgradeItem m4">Cost: $<span id="applePieIngredientsCost"></span> <span class="ml8">This is the cost to purchase new ingredients. It gets expensive finding new delicious ingredients.</span></div>
+                        <div class="upgradeItem m4">"Some better ingredients for your cooks to use." These ingredients will make your pies sell for aproximately $<span id="applePieIngredientsEffect">N</span> more.</div>
+                    </div>
+                </div>
+
+                <div class="upgradeContainer">
+                    <div class="upgradeButton">
+                        <button onClick="buyApplePieOvens()">Ovens</button>
+                    </div>
+                    <div class="upgradeDetails">
+                        <div class="upgradeItem m4">Ovens: <span id="applePieOvens"></span> <span class="ml8">This is the number of ovens currently in your kitchen making more apple pies!</span></div>
+                        <div class="upgradeItem m4">Cost: $<span id="applePieOvenCost"></span> <span class="ml8">This is the cost to build new ovens. It gets expensive building these cookery-doos.</span></div>
+                        <div class="upgradeItem m4">"More ovens will surely help your cooks make pies faster!" New ovens will make pies every <span id="applePieCookTime">N</span> seconds.</div>
+                    </div>
+                </div>
+
+                <div class="upgradeContainer">
+                    <div class="upgradeButton">
+                        <button onClick="buyApplePieMarketing()">Marketing</button>
+                    </div>
+                    <div class="upgradeDetails">
+                        <div class="upgradeItem m4">Complete Lies: <span id="applePieMarketing"></span> <span class="ml8">This is the number of lies your marketing team has thought up to keep these pies on the market!</span></div>
+                        <div class="upgradeItem m4">Cost: $<span id="applePieMarketingCost"></span> <span class="ml8">This is the cost to force your marketing team to make more lies. It gets expensive to force them. Why, I wonder?</span></div>
+                        <div class="upgradeItem m4">"Tell people that eating your pies will make them a better person!..or other lies.." With more lies your pies'll be selling fast! Currently, you are selling <span id="applePieSellPercent">N</span>% of your pies.</div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="container m4">
+            <div class="pietype m4">
+                <div class="title">
+                    <div class="pieButton"> 
+                        <button onClick="blueberryPieClick(1)" class="pie"></button>
+                    </div>
+                    <div class="titleText">Blueberry Pies</div>
+                </div>
+
+                <div class="upgradeContainer">
+                    <div class="upgradeButton">
+                        <button onClick="buyBlueberryPieCooks()">Cooks</button>
+                    </div>
+                    <div class="upgradeDetails">
+                        <div class="upgradeItem m4">Cooks: <span id="blueberryPieCooks"></span> <span class="ml8">This is the number of cooks currently in your kitchen making blueberry pies.</span></div>
+                        <div class="upgradeItem m4">Cost: $<span id="blueberryPieCookCost"></span> <span class="ml8">This is the cost to hire one more cook. Man they get expensive.</span></div>
+                        <div class="upgradeItem m4">"A nice cook to bake for you." These guys working together bake <span id="blueberryPieCooksBakeCount">N</span> every <span id="blueberryPieCooksBakeTime">N</span> seconds.</div>
+                    </div>
+                </div>
+
+                <div class="upgradeContainer">
+                    <div class="upgradeButton">
+                        <button onClick="buyBlueberryPieIngredients()">Ingredients</button>
+                    </div>
+                    <div class="upgradeDetails">
+                        <div class="upgradeItem m4">Ingredients: <span id="blueberryPieIngredients"></span> <span class="ml8">This is the number of higher-quality ingredients currently in your kitchen making blueberry pies taste better!</span></div>
+                        <div class="upgradeItem m4">Cost: $<span id="blueberryPieIngredientsCost"></span> <span class="ml8">This is the cost to purchase new ingredients. It gets expensive finding new delicious ingredients.</span></div>
+                        <div class="upgradeItem m4">"Some better ingredients for your cooks to use." These ingredients will make your pies sell for aproximately $<span id="blueberryPieIngredientsEffect">N</span> more.</div>
+                    </div>
+                </div>
+
+                <div class="upgradeContainer">
+                    <div class="upgradeButton">
+                        <button onClick="buyBlueberryPieOvens()">Ovens</button>
+                    </div>
+                    <div class="upgradeDetails">
+                        <div class="upgradeItem m4">Ovens: <span id="blueberryPieOvens"></span> <span class="ml8">This is the number of ovens currently in your kitchen making more blueberry pies!</span></div>
+                        <div class="upgradeItem m4">Cost: $<span id="blueberryPieOvenCost"></span> <span class="ml8">This is the cost to build new ovens. It gets expensive building these cookery-doos.</span></div>
+                        <div class="upgradeItem m4">"More ovens will surely help your cooks make pies faster!" New ovens will make pies every <span id="blueberryPieCookTime">N</span> seconds.</div>
+                    </div>
+                </div>
+
+                <div class="upgradeContainer">
+                    <div class="upgradeButton">
+                        <button onClick="buyBlueberryPieMarketing()">Marketing</button>
+                    </div>
+                    <div class="upgradeDetails">
+                        <div class="upgradeItem m4">Complete Lies: <span id="blueberryPieMarketing"></span> <span class="ml8">This is the number of lies your marketing team has thought up to keep these pies on the market!</span></div>
+                        <div class="upgradeItem m4">Cost: $<span id="blueberryPieMarketingCost"></span> <span class="ml8">This is the cost to force your marketing team to make more lies. It gets expensive to force them. Why, I wonder?</span></div>
+                        <div class="upgradeItem m4">"Tell people that eating your pies will make them a better person!..or other lies.." With more lies your pies'll be selling fast! Currently, you are selling <span id="blueberryPieSellPercent">N</span>% of your pies.</div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>

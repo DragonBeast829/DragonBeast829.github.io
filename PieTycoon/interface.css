@@ -1,0 +1,67 @@
+button.pie{
+    /*<img src="https://img.icons8.com/ios/50/000000/pie.png"/>*/
+    background-image: url('https://img.icons8.com/ios/50/000000/pie.png');
+    background-size: cover;
+    width:32px;
+    height:32px;
+}
+
+.container{
+    border: black 1px solid;
+}
+
+.pietype{
+    border: blue 1px solid;
+}
+
+.upgrade{
+    border: green 1px solid;
+    padding: 1%;
+    height:fit-content;
+}
+
+.m4{
+    margin: 4px;
+}
+.ml8{
+    margin-left:8px;
+}
+.hide{
+    display:none;
+}
+.loading{
+    display:block;
+}
+
+
+.title{
+    width:100%;
+    text-align: center;
+    height:fit-content;
+    display:flex;
+}
+.titleText{
+    width:100%;
+}
+.pieButton{
+    width:50px;
+}
+.upgradeContainer{
+    width:100%;
+    display:flex;
+}
+.upgradeButton{
+    border: solid 1px #ccc;
+    width: fit-content;
+    padding:10px;
+}
+.upgradeButton>button{
+    height: 100%;
+}
+.upgradeDetails{
+    width:100%;
+    border: solid 1px #ccc;
+}
+.upgradeItem{
+    border-bottom: dotted 1px #ccc;
+}
