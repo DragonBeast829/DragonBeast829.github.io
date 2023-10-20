@@ -1,0 +1,29 @@
+html {
+    background-color: black;
+    color: white;
+}
+
+p, a, h1, h2, h3, h4 {
+    font-family: 'Comic Sans MS';
+}
+
+div.center {
+    border: 5px solid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+}
+
+#searchBar {
+    width: 100%;
+    margin-bottom: 0;
+    font-family: "Comic Sans MS";
+}
+
+#searchBarOutput {
+    margin-top: 0;
+    border-color: lightgray;
+    background-color: white;
+}
