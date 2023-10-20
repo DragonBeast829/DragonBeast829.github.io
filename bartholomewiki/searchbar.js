@@ -2,11 +2,11 @@ var pages = {
     "pages": [
         {
             "title": "Bartholomew Bartholomore IV",
-            "link": "/bartholomew-wiki/bartholomew"
+            "link": "/bartholomewiki/bartholomew"
         },
 	{
             "title": "Peepur Rat Clan",
-            "link": "/bartholomew-wiki/peepur-rat-clan"
+            "link": "/bartholomewiki/peepur-rat-clan"
         }
     ]
 }
